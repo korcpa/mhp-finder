@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<meta name="theme-color" content="#20160f" />
+<meta name="description" content="나에게 맞는 정신건강전문요원 찾기 레트로 RPG 웹게임" />
+<title>나에게 맞는 정신건강전문요원 찾기</title>
+
+<meta property="og:title" content="나에게 맞는 정신건강전문요원 찾기" />
+<meta property="og:description" content="나에게 맞는 정신건강전문요원을 찾아보세요." />
+<meta property="og:image" content="https://jeonbomyi.github.io/KCPA-Match/assets/share/title-preview.png" />
+<meta property="og:url" content="https://jeonbomyi.github.io/KCPA-Match/" />
+<meta property="og:type" content="website" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="나에게 맞는 정신건강전문요원 찾기" />
+<meta name="twitter:description" content="나에게 맞는 정신건강전문요원을 찾아보세요." />
+<meta name="twitter:image" content="https://jeonbomyi.github.io/KCPA-Match/assets/share/title-preview.png" />
+
+<link rel="stylesheet" href="./style.css" />
+<link rel="stylesheet" href="./share-card.css" />
+</head>
+
+<body>
+<div class="app">
+  <div class="shell">
+    <div class="top">
+      <span>마음건강센터</span>
+      <span class="badge" id="badge">START</span>
+    </div>
+
+    <div class="screen">
+      <section class="scene" id="titleScene" aria-label="시작 화면">
+        <img class="titleBg" src="./assets/title/title_bg-opt.png" alt="" aria-hidden="true" fetchpriority="high" />
+
+        <div class="titleHero">
+          <p class="titleKicker">나에게 맞는</p>
+          <h1>정신건강전문요원 찾기</h1>
+          <p class="titleSub">지금 나의 마음건강을 도와줄 전문가를 만나보세요.</p>
+        </div>
+
+        <img
+          class="titleLineup"
+          src="./assets/npc/title_lineup-opt.png"
+          alt=""
+          aria-hidden="true"
+          fetchpriority="high"
+          decoding="async"
+        />
+
+        <button class="titleStart" type="button" id="startBtn">
+          ▶ 시작하기
+        </button>
+
+        <div class="titleNote">
+          정신건강전문요원은 함께 협력하지만,<br />
+          각자의 전문 역할은 조금씩 다릅니다.
+        </div>
+      </section>
+
+      <section class="scene hidden" id="hallScene" aria-label="접수실">
+        <div class="floor"></div>
+        <div class="counter"></div>
+
+        <div class="staffBubble">
+          <span>전문요원 이름을 눌러</span>
+          <span>역할을 자세히 볼 수 있어요</span>
+        </div>
+
+        <div class="roomGrid" id="roomGrid"></div>
+      </section>
+
+      <section class="scene hidden" id="roleIntroScene" aria-label="정신건강전문요원 직역 소개">
+        <div class="roleIntroPanel">
+          <h2 class="roleIntroTitle">
+            한 사람의 회복을 위해<br />
+            네 분야가 함께 협력합니다
+          </h2>
+
+          <div class="roleIntroLineupWrap">
+            <img
+              class="roleIntroLineup"
+              src="./assets/npc/title_lineup-opt.png"
+              alt="정신건강임상심리사, 정신건강사회복지사, 정신건강간호사, 정신건강작업치료사"
+              decoding="async"
+            />
+            <div class="roleIntroIconRow" aria-hidden="true">
+              <span>❤️</span>
+              <span>🏠</span>
+              <span>💊</span>
+              <span>🌱</span>
+            </div>
+          </div>
+
+          <p class="roleIntroSummary">
+            마음의 이해, 생활 지원, 건강관리, 일상 회복을<br />
+            각 분야의 전문성으로 함께 돕습니다.
+          </p>
+        </div>
+      </section>
+
+      <section class="scene hidden" id="roomScene" aria-label="상담실">
+        <div class="wall"></div>
+        <div class="wood"></div>
+        <div class="bookshelf"></div>
+        <div class="table"></div>
+        <div class="tableText" id="tableText">WAIS · MMPI · 심리치료</div>
+      </section>
+
+      <section class="scene hidden" id="resultScene" aria-label="결과 화면">
+        <div class="paperBg">
+          <div class="paper" id="resultPaper"></div>
+
+          <button class="resultShareBtn" type="button" onclick="shareKakao()">
+            💬 결과 공유하기
+          </button>
+        </div>
+      </section>
+    </div>
+
+    <div class="dialog" aria-label="대화창">
+      <div class="progressBox">
+        <span class="progressLabel" id="progressLabel">대기</span>
+        <div class="progressTrack" aria-hidden="true">
+          <div class="progressFill" id="progressFill"></div>
+        </div>
+      </div>
+
+      <div class="speaker" id="speaker">안내</div>
+      <div class="textbox" id="textbox">시작하기를 눌러 마음건강센터에 들어가 보세요.</div>
+      <div class="choices" id="choices"></div>
+
+      <div class="navbar">
+        <button class="navbtn" id="backBtn" type="button" onclick="goBack()">◀ 이전</button>
+        <button class="navbtn" type="button" onclick="restart()">🏠 처음</button>
+        <button class="navbtn" type="button" onclick="showHistory()">📒 선택</button>
+      </div>
+    </div>
+
+    <div class="footer">
+      ※ 교육·홍보용 목업입니다. 위기 상황이거나 긴급한 도움이 필요하면 가까운 응급실, 정신건강의학과 진료, 자살예방상담전화 109 또는 112 등 즉각적인 도움을 우선 이용하세요.
+    </div>
+  </div>
+</div>
+
+<div id="shareCardContainer"></div>
+
+<div class="modal hidden" id="historyModal" role="dialog" aria-modal="true" aria-label="현재까지 선택">
+  <div class="modalCard">
+    <h3>현재까지 선택</h3>
+    <div class="historyList" id="historyList"></div>
+    <button class="closeBtn" type="button" onclick="closeHistory()">닫기</button>
+  </div>
+</div>
+
+<!-- html2canvas -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+<!-- Kakao SDK -->
+<script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.5/kakao.min.js" crossorigin="anonymous"></script>
+
+<script>
+  Kakao.init("fbe0b1c5aa13b34275f78fc22125a9af");
+</script>
+
+<!-- 게임 스크립트 -->
+<script src="./share-card.js"></script>
+<script src="./analytics.js"></script>
+<script src="./script.js"></script>
+</body>
+</html>
