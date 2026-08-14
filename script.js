@@ -1074,18 +1074,18 @@ function shareKakao() {
     content: {
       title: "지금 내게 필요한 정신건강전문요원은?",
       description: getKakaoShareDescription(),
-      imageUrl: `https://jeonbomyi.github.io/KCPA-Match/assets/share/${getKakaoShareImageName()}`,
+      imageUrl: `https://korcpa.github.io/mhp-finder/assets/share/${getKakaoShareImageName()}`,
       link: {
-  mobileWebUrl: "https://jeonbomyi.github.io/KCPA-Match/",
-  webUrl: "https://jeonbomyi.github.io/KCPA-Match/"
+        mobileWebUrl: "https://korcpa.github.io/mhp-finder/",
+        webUrl: "https://korcpa.github.io/mhp-finder/"
       }
     },
     buttons: [
       {
         title: "나도 해보기",
         link: {
-          mobileWebUrl: "https://jeonbomyi.github.io/KCPA-Match/",
-          webUrl: "https://jeonbomyi.github.io/KCPA-Match/"
+          mobileWebUrl: "https://korcpa.github.io/mhp-finder/",
+          webUrl: "https://korcpa.github.io/mhp-finder/"
         }
       }
     ]
