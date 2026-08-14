@@ -173,14 +173,14 @@ const shareDetailHtml = isSinglePrimary && considerKeys.length
 
         <div class="mhShareCreditRows">
           <div>기획 │ 이혜현 · 제작 │ 유튜브「심리실언니들」</div>
-          <div>배포·감수 │ 한국임상심리전문가협회</div>
+          <div>배포·감수 │ 한국임상심리사협회</div>
         </div>
 
         <img
           class="mhShareLogoImg"
           src="${SHARE_CARD_LOGO_PATH}"
-          alt="한국임상심리전문가협회(KOCPA)"
-          onerror="this.replaceWith(Object.assign(document.createElement('div'), { className: 'mhShareLogoText', textContent: '한국임상심리전문가협회(KOCPA)' }))"
+          alt="한국임상심리사협회(KOCPA)"
+          onerror="this.replaceWith(Object.assign(document.createElement('div'), { className: 'mhShareLogoText', textContent: '한국임상심리사협회(KOCPA)' }))"
         >
       </footer>
     </div>
