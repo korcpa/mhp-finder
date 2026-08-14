@@ -804,7 +804,7 @@ function showResult() {
         >[채널 바로가기]</a>
       </div>
       <div>
-        배포·감수: 한국임상심리전문가협회
+        배포·감수: 한국임상심리사협회
         <a
           class="resultCreditLink"
           href="https://kocpa.kr/"
