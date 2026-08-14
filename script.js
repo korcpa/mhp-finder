@@ -379,6 +379,8 @@ function showHallResult() {
 
 function start() {
   resetState();
+  const titleCredits = byId("titleCredits");
+if (titleCredits) titleCredits.classList.add("hidden");
   if (window.GameAnalytics) {
     window.GameAnalytics.beginPlay();
   }
@@ -1026,6 +1028,10 @@ function closeHistory() {
 
 function restart() {
   resetState();
+
+  const titleCredits = byId("titleCredits");
+if (titleCredits) titleCredits.classList.remove("hidden");
+  
   scene("titleScene");
 
   const roomScene = byId("roomScene");
