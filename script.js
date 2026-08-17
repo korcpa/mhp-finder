@@ -1154,3 +1154,35 @@ function getKakaoShareDescription() {
 
   return `${primaryName}가 추천됐어요!\n당신에게는 어떤 전문요원이 필요할까요?`;
 }
+/* 접수실·상담실 이미지를 미리 받아 장면 전환 지연 방지 */
+const GAME_IMAGE_PRELOADS = [
+  "./assets/rooms/hall-opt.webp",
+  "./assets/rooms/clinical-opt.webp",
+  "./assets/rooms/nurse-opt.webp",
+  "./assets/rooms/social-opt.webp",
+  "./assets/rooms/ot-opt.webp",
+
+  "./assets/npc/clinical-room-opt.webp",
+  "./assets/npc/nurse-room-opt.webp",
+  "./assets/npc/social-room-opt.webp",
+  "./assets/npc/ot-room-opt.webp"
+];
+
+const gameImageCache = [];
+
+function preloadGameImages() {
+  GAME_IMAGE_PRELOADS.forEach((src) => {
+    const image = new Image();
+    image.decoding = "async";
+    image.src = src;
+    gameImageCache.push(image);
+  });
+}
+
+window.addEventListener("load", () => {
+  if ("requestIdleCallback" in window) {
+    requestIdleCallback(preloadGameImages, { timeout: 1500 });
+  } else {
+    setTimeout(preloadGameImages, 500);
+  }
+}, { once: true });
