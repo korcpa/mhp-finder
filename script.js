@@ -17,7 +17,7 @@ const services = {
     color: "#8357c7",
     table: "종합심리평가 · 전문 심리치료 · 마음 이해",
     desc: FIXED_DESCRIPTIONS.clinical,
-    roomNpc: "./assets/npc/clinical-room-opt.png",
+    roomNpc: "./assets/npc/clinical-room-opt.webp",
     resultNpc: "./assets/npc/clinical-result-opt.png",
     subLabel: "심리평가 · 심리상담"
   },
@@ -29,7 +29,7 @@ const services = {
     color: "#d35252",
     table: "건강상태 관찰 · 복약 및 수면체크 · 건강증진",
     desc: FIXED_DESCRIPTIONS.nurse,
-    roomNpc: "./assets/npc/nurse-room-opt.png",
+    roomNpc: "./assets/npc/nurse-room-opt.webp",
     resultNpc: "./assets/npc/nurse-result-opt.png",
     subLabel: "건강관리 · 약물관리"
   },
@@ -41,7 +41,7 @@ const services = {
     color: "#4d9a45",
     table: "환경 및 사회서비스 조사 · 복지상담 · 자원연계",
     desc: FIXED_DESCRIPTIONS.social,
-    roomNpc: "./assets/npc/social-room-opt.png",
+    roomNpc: "./assets/npc/social-room-opt.webp",
     resultNpc: "./assets/npc/social-result-opt.png",
     subLabel: "복지연계 · 지역사회 지원"
   },
@@ -53,7 +53,7 @@ const services = {
     color: "#2f70b7",
     table: "작업수행평가 · 인지재활치료 · 일상생활훈련",
     desc: FIXED_DESCRIPTIONS.ot,
-    roomNpc: "./assets/npc/ot-room-opt.png",
+    roomNpc: "./assets/npc/ot-room-opt.webp",
     resultNpc: "./assets/npc/ot-result-opt.png",
     subLabel: "일상생활 · 사회복귀"
   }
