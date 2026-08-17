@@ -2240,3 +2240,22 @@ body:has(#titleScene:not(.hidden)) .choices:empty {
     bottom: 31% !important;
   }
 }
+/* 모바일: 안내문 글씨 복원 + 시작 버튼 위로 이동 */
+@media (max-width: 480px) {
+  body:has(#titleScene:not(.hidden)) .titleNote {
+    bottom: 8px !important;
+    padding: 7px 9px !important;
+    font-size: 12px !important;
+    line-height: 1.35 !important;
+  }
+
+  body:has(#titleScene:not(.hidden)) .titleStart {
+    bottom: 92px !important;
+    min-height: 40px !important;
+    font-size: 15px !important;
+  }
+
+  body:has(#titleScene:not(.hidden)) .titleLineup {
+    bottom: 34% !important;
+  }
+}
