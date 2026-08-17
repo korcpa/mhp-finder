@@ -355,7 +355,7 @@ button {
    2. Hall & Room Backgrounds (그래픽 및 룸 카드 최적화)
 ========================================================= */
 #hallScene {
-  background: url("./assets/rooms/hall-opt.png") center/cover no-repeat !important;
+  background: url("./assets/rooms/hall-opt.webp") center/cover no-repeat !important;
 }
 
 #hallScene .floor, #hallScene .counter, .staff {
@@ -430,10 +430,10 @@ button {
   background-size: cover !important;
   background-repeat: no-repeat !important;
 }
-#roomScene.room-clinical { background-image: url("./assets/rooms/clinical-opt.png") !important; }
-#roomScene.room-nurse { background-image: url("./assets/rooms/nurse-opt.png") !important; }
-#roomScene.room-social { background-image: url("./assets/rooms/social-opt.png") !important; }
-#roomScene.room-ot { background-image: url("./assets/rooms/ot-opt.png") !important; }
+#roomScene.room-clinical { background-image: url("./assets/rooms/clinical-opt.webp") !important; }
+#roomScene.room-nurse { background-image: url("./assets/rooms/nurse-opt.webp") !important; }
+#roomScene.room-social { background-image: url("./assets/rooms/social-opt.webp") !important; }
+#roomScene.room-ot { background-image: url("./assets/rooms/ot-opt.webp") !important; }
 
 #roomScene .wall, #roomScene .wood, #roomScene .bookshelf, #roomScene .table, #roomScene .tableText, .roomNpc, .playerRoom {
   display: none !important;
