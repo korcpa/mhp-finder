@@ -2197,3 +2197,25 @@ body:has(#titleScene:not(.hidden)) .navbar {
 body:has(#titleScene:not(.hidden)) .choices:empty {
   display: none !important;
 }
+/* 첫 화면 대기·안내·메뉴 복원 */
+body:has(#titleScene:not(.hidden)) .progressBox {
+  display: flex !important;
+}
+
+body:has(#titleScene:not(.hidden)) .speaker,
+body:has(#titleScene:not(.hidden)) .textbox {
+  display: block !important;
+}
+
+body:has(#titleScene:not(.hidden)) .textbox {
+  flex: 0 0 auto !important;
+}
+
+body:has(#titleScene:not(.hidden)) .navbar {
+  display: grid !important;
+  margin-top: 6px !important;
+}
+
+body:has(#titleScene:not(.hidden)) .choices:empty {
+  display: none !important;
+}
