@@ -2174,3 +2174,26 @@ body:has(#titleScene:not(.hidden)) .titleNote {
     line-height: 1.3 !important;
   }
 }
+/* 첫 화면 대화창 다시 표시 */
+body:has(#titleScene:not(.hidden)) .progressBox {
+  display: flex !important;
+}
+
+body:has(#titleScene:not(.hidden)) .speaker {
+  display: block !important;
+}
+
+body:has(#titleScene:not(.hidden)) .textbox {
+  display: block !important;
+  flex: 0 0 auto !important;
+}
+
+body:has(#titleScene:not(.hidden)) .navbar {
+  display: grid !important;
+  margin-top: 6px !important;
+}
+
+/* 선택지가 비어 있을 때는 숨김 유지 */
+body:has(#titleScene:not(.hidden)) .choices:empty {
+  display: none !important;
+}
