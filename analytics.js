@@ -129,7 +129,6 @@
 function makePattern(scores) {
   return SCORE_KEYS
     .map((key) => Math.round(scores[key] / 2.5))
-    .sort((a, b) => b - a)
     .join("");
 }
 
