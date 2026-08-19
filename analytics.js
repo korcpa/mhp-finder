@@ -11,7 +11,7 @@
 
   // Paste the deployed Google Apps Script Web App URL (/exec) here.
   // An empty URL safely disables network transmission while keeping the game operational.
-  const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbyLBtYShrTseoqEJ-giL9P0DM0vMO9Euh8YuK44WJA9Ld1oAupDTLOme_G4Ha-d0THo/exec";
+  const WEB_APP_URL = "https://script.google.com/macros/s/AKfycby4dGvLXreYbHxQcTjfQazxuyjv7c-SApi643NSwV3q9jFf7Mbnp20tyjXzKsMJcEX-iA/exec";
 
   const STORAGE_PREFIX = "mh-game-analytics-v2";
   const SESSION_TIMEOUT_MS = 30 * 60 * 1000;
