@@ -126,12 +126,12 @@
     writeStorage("session", JSON.stringify(session));
   }
 
-  function makePattern(scores) {
-    return SCORE_KEYS
-      .map((key) => scores[key])
-      .sort((a, b) => b - a)
-      .join("");
-  }
+function makePattern(scores) {
+  return SCORE_KEYS
+    .map((key) => Math.round(scores[key] / 2.5))
+    .sort((a, b) => b - a)
+    .join("");
+}
 
   function resultKeysFromScores(scores) {
     const values = SCORE_KEYS.map((key) => scores[key]);
