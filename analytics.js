@@ -7,7 +7,7 @@
 (function (window) {
   "use strict";
 
-  const GAME_VERSION = "1.1.0";
+  const GAME_VERSION = "1.2.0";
 
   // Paste the deployed Google Apps Script Web App URL (/exec) here.
   // An empty URL safely disables network transmission while keeping the game operational.
